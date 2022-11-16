@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="style.css">
+ <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <title>Nike Zoom</title>
+</head>
+<body>
+        <div class="container">
+         <div class="imgBx">
+          <img src="images/nike.png" alt="img">
+         </div>
+         <div class="details">
+           <div class="content">
+            <h2>Nike Pegasus Turbo<br><span>Running Collection</span></h2>
+           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h3>$200.99</h3>
+            <button onclick="showmodal()">Buy Now</button>
+          </div>
+         </div>
+        </div>
+
+         <div class="modal">
+          <img src="images/ani.jpg" alt="img thank">
+          <div class="content2">
+           <h1>Thank you for your purchase</h1>
+           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+           </div>
+           <div onclick="hidemodal()" class="hide fa fa-window-close"></div>
+          </div>
+         
+
+           
+
+
+<script>
+  var modal = document.getElementsByClassName("modal")[0];
+  function showmodal(){
+   modal.style.bottom = "20px";
+  }
+  function hidemodal(){
+    modal.style.bottom = "-300px";
+  }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

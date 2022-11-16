@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.cdnfonts.com/css/futura');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body{
+ display: flex;
+ justify-content: center;
+ font-family: 'Poppins', sans-serif;
+ align-items: center;
+ min-height:100vh;
+ background: #070c24;
+}
+
+
+.container{
+ position: relative;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ width: 900px;
+ height: 600px;
+ background: #fff;
+ margin: 20px;
+}
+
+.container .imgBx{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background: #006dbc;
+}
+
+.container .imgBx:before{
+   content: 'Nike';
+   position: absolute;
+   top: 10px;
+   left: 20px;
+   color: #000;
+   opacity: 0.1;
+   font-size: 8em;
+   font-style: italic;
+   font-weight: bold;
+   font-family: 'Futura', sans-serif;
+}
+
+.container .imgBx img{
+  position: relative;
+  width: 700px;
+  transform: rotate(-30deg);
+  left:-50px;
+}
+
+.container .imgBx img:hover,
+.container .imgBx img:active,
+.container .imgBx img:focus{
+   animation-name: elementor-animation-bob-float, elementor-animation-bob;
+   animation-duration: .3s, 1.5s;
+   animation-delay: 0s, .3s;
+   animation-timing-function: ease-out, ease-in-out;
+   animation-iteration-count: 1, infinite;
+   animation-fill-mode: forwards;
+   animation-direction: normal, alternate;
+}
+
+
+.container .details{
+
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ width: 50%;
+ height: 100%;
+ box-sizing: border-box;
+ padding:40px;
+
+}
+
+.container .details h2 {
+ margin: 0;
+ padding: 0;
+ font-size: 1.9em;
+ line-height: 0.8em;
+ color: #444;
+ font-weight: 800;
+}
+
+.container .details h2 span {
+ font-size:0.4em;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color:#999;
+}
+
+.container .details p{
+    max-width: 85%;
+    margin-left:8%;
+    color: #333;
+    font-size:15px;
+    padding: 20px 0 20px 0px;
+}
+
+.container .details h3{
+   margin: 0;
+   padding: 0;
+   font-size:2.5em;
+   color: #a2a2a2;
+   float: left;
+}
+
+.container .details button{
+   background: #006dbc;
+   color: #fff;
+   border:none;
+   box-shadow:none;
+   outline:none;
+   padding: 15px 20px;
+   margin-top: 10px;
+   font-size: 16px;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   font-weight: 600;
+   border-radius:40px;
+   float:right;
+   cursor:pointer;
+   transition: 0.3s;
+}
+
+
+.container .details button:hover{
+   transform: scale(1.1);
+   box-shadow: 0 0 18px 1px #006dbc;
+}
+
+
+.modal{
+ width: 500px;
+ height: 200px;
+ overflow: hidden;
+ background: #34495e;
+ position: fixed;
+ bottom: -300px;
+ right: 20px;
+ transition: 1s;
+}
+
+.modal img{
+ width: 200px;
+ height: 200px;
+ float:left;
+}
+
+.modal .content2{
+ width: 300px;
+ padding: 20px;
+ box-sizing:border-box;
+ float:left;
+ color: white;
+}
+
+.content2 h1{
+ font-size:20px;
+ padding-bottom:15px;
+}
+
+.content2 p{
+ font-size:15px;
+}
+
+.hide{
+ position: absolute;
+ z-index: 9999;
+ top:14px;
+ right:14px;
+ font-size:20px;
+ color: #000;
+ opacity: 0.7;;
+ transition: 0.3s;
+ cursor: pointer;
+}
+
+.hide:hover{
+ transform: rotate(90deg);
+ opacity:1;
+}
+
+
+
+
+
+
+@media (max-width: 1080px){
+
+  .container{
+   height: auto;
+  }
+
+   .container .imgBx{
+     padding: 40px;
+     box-sizing:border-box;
+     width: 100%!important;
+     height: auto;
+     overflow: hidden;
+   }
+
+   .container .imgBx img{
+      left: initial;
+      max-width: 100%;
+      transform: rotate(0deg);
+   }
+
+   .container .imgBx img:hover,
+   .container .imgBx img:active,
+   .container .imgBx img:focus{
+   animation-name: elementor-animation-bob-float_media, elementor-animation-bob_media;
+   animation-duration: .3s, 1.5s;
+   animation-delay: 0s, .3s;
+   animation-timing-function: ease-out, ease-in-out;
+   animation-iteration-count: 1, infinite;
+   animation-fill-mode: forwards;
+   animation-direction: normal, alternate;
+}
+
+   .details{
+    width: 100%!important;
+    height: auto;
+    padding: 20px;
+   }
+
+  .container .details p{
+      max-width: 100%;
+      margin-left:0;
+   }
+
+   .modal {
+      width: 400px;
+      height: 150px;
+  }
+
+  .modal img {
+      width: 150px;
+      height: 150px;
+   }
+
+   .modal .content2{
+      width: 250px;
+  }
+
+   .content2 h1 {
+      font-size: 16px;
+      padding-bottom: 10px;
+  }
+
+  .content2 p {
+      font-size: 12px;
+  }
+
+  /* Image animations media */
+
+@keyframes elementor-animation-bob_media {
+   0% {
+     transform: translateY(-8px);
+   }
+ 
+   50% {
+     transform: translateY(-4px);
+   }
+ 
+   100% {
+     transform: translateY(-8px);
+   }
+ }
+ 
+ @keyframes elementor-animation-bob-float_media {
+   100% {
+     transform: translateY(-8px);
+   }
+ }
+}
+
+
+/* Image animations */
+
+@keyframes elementor-animation-bob {
+   0% {
+     transform: translateY(-8px) rotate(-30deg);
+   }
+ 
+   50% {
+     transform: translateY(-4px) rotate(-30deg);
+   }
+ 
+   100% {
+     transform: translateY(-8px) rotate(-30deg);
+   }
+ }
+ 
+ @keyframes elementor-animation-bob-float {
+   100% {
+     transform: translateY(-8px) rotate(-30deg);
+   }
+ }
+ 
+  
